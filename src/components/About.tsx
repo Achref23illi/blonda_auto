@@ -52,7 +52,7 @@ const About = () => {
             {/* Description */}
             <div className="mb-12">
               <p className="text-lg font-light text-gray-700 leading-relaxed mb-6">
-                Blonda Auto incarne l'excellence dans l'univers de l'automobile d'exception. 
+                Blanda Auto incarne l'excellence dans l'univers de l'automobile d'exception. 
                 Depuis notre création, nous cultivons l'art de sélectionner et présenter 
                 des véhicules qui transcendent le simple transport.
               </p>

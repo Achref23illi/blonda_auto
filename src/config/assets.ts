@@ -12,6 +12,6 @@ export const assets = {
   },
   
   // Hero and other images
-  hero: 'https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=1920&h=1080&fit=crop&q=80',
+  hero: 'https://images.pexels.com/photos/70912/pexels-photo-70912.jpeg',
   showroom: 'https://images.unsplash.com/photo-1562141961-b1d3a10a8ba0?w=800&h=600&fit=crop&q=80'
 };

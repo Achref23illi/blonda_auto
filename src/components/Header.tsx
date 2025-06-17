@@ -21,7 +21,8 @@ const Header = ({ onNavigateToSection }: HeaderProps) => {
     { label: 'Découvrir', href: '#decouvrir', section: 'accueil' },
     { label: 'Collection', href: '#vehicules', section: 'vehicules' },
     { label: 'Services Exclusifs', href: '#services', section: 'services' },
-    { label: 'L\'Expérience Blonda', href: '#experience', section: 'apropos' },
+    { label: 'Service Mécanique', href: '#mecanique', section: 'mecanique' },
+    { label: 'L\'Expérience Blanda', href: '#experience', section: 'apropos' },
     { label: 'Contact', href: '#contact', section: 'contact' },
   ];
 
@@ -34,32 +35,37 @@ const Header = ({ onNavigateToSection }: HeaderProps) => {
 
   return (
     <>
-      {/* Top Bar - Luxury Info */}
-      <div className="bg-black text-white text-xs">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-8">
-            <div className="flex items-center space-x-6">
-              <span className="tracking-widest uppercase">Concessionnaire Premium</span>
-            </div>
-            <div className="flex items-center space-x-8">
-              <a href="tel:5141234567" className="hover:text-gray-300 transition-colors tracking-wider">
-                +1 (514) 123-4567
-              </a>
-              <span className="text-gray-400">|</span>
-              <a href="#" className="hover:text-gray-300 transition-colors tracking-wider">
-                Prendre Rendez-vous
-              </a>
+      {/* Combined Header with Top Bar */}
+      <header className={`fixed top-0 w-full z-50 transition-all duration-300 ease-in-out ${
+        scrolled ? 'bg-white shadow-xl' : 'bg-transparent'
+      }`}>
+        {/* Top Bar - Luxury Info */}
+        <div className={`text-xs transition-all duration-300 ${
+          scrolled ? 'bg-gray-900 text-white' : 'bg-black text-white'
+        }`}>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex justify-between items-center h-8">
+              <div className="flex items-center space-x-6">
+                <span className="tracking-widest uppercase">Concessionnaire Premium</span>
+              </div>
+              <div className="flex items-center space-x-8">
+                <a href="tel:5141234567" className="hover:text-gray-300 transition-colors tracking-wider">
+                  +1 (514) 123-4567
+                </a>
+                <span className="text-gray-400">|</span>
+                <a href="#" className="hover:text-gray-300 transition-colors tracking-wider">
+                  Prendre Rendez-vous
+                </a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Main Header */}
-      <header className={`fixed top-8 w-full z-50 transition-all duration-500 ${
-        scrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
-      }`}>
+        {/* Main Navigation */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-24">
+          <div className={`flex justify-between items-center transition-all duration-300 ease-in-out ${
+            scrolled ? 'h-16' : 'h-24'
+          }`}>
             {/* Logo */}
             <motion.div 
               initial={{ opacity: 0, x: -30 }}
@@ -71,7 +77,7 @@ const Header = ({ onNavigateToSection }: HeaderProps) => {
                 <h1 className={`text-3xl font-light tracking-[0.3em] transition-colors duration-300 ${
                   scrolled ? 'text-gray-900' : 'text-white'
                 }`}>
-                  BLONDA
+                  BLANDA
                 </h1>
                 <span className={`text-xs tracking-[0.4em] font-light transition-colors duration-300 ${
                   scrolled ? 'text-gray-600' : 'text-gray-300'
@@ -82,7 +88,7 @@ const Header = ({ onNavigateToSection }: HeaderProps) => {
             </motion.div>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-12">
+            <nav className="hidden lg:flex items-center space-x-8">
               {navItems.map((item, index) => (
                 <motion.div
                   key={item.label}
@@ -94,7 +100,7 @@ const Header = ({ onNavigateToSection }: HeaderProps) => {
                   <a
                     href={item.href}
                     onClick={(e) => handleNavClick(item.section, e)}
-                    className={`text-sm font-light tracking-wider uppercase transition-all duration-300 cursor-pointer ${
+                    className={`text-xs font-light tracking-wide uppercase transition-all duration-300 cursor-pointer whitespace-nowrap ${
                       scrolled 
                         ? 'text-gray-700 hover:text-black' 
                         : 'text-white/90 hover:text-white'
@@ -175,7 +181,9 @@ const Header = ({ onNavigateToSection }: HeaderProps) => {
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="lg:hidden bg-white border-t border-gray-100"
+              className={`lg:hidden border-t border-gray-100 ${
+                scrolled ? 'bg-white' : 'bg-white'
+              }`}
             >
               <nav className="px-4 py-8 space-y-6">
                 {navItems.map((item, index) => (
@@ -209,9 +217,6 @@ const Header = ({ onNavigateToSection }: HeaderProps) => {
           )}
         </AnimatePresence>
       </header>
-
-      {/* Spacer for fixed header */}
-      <div className="h-32"></div>
     </>
   );
 };

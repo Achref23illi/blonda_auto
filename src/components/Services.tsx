@@ -10,18 +10,12 @@ const Services = () => {
     },
     {
       number: '02',
-      title: 'Financement Sur Mesure',
-      description: 'Solutions financières personnalisées adaptées à votre profil et vos ambitions.',
-      features: ['Taux préférentiels', 'Conseiller dédié', 'Approbation rapide']
-    },
-    {
-      number: '03',
       title: 'Conciergerie Automobile',
       description: 'Un service de conciergerie exclusif pour une expérience sans compromis.',
       features: ['Livraison à domicile', 'Entretien VIP', 'Assistance 24/7']
     },
     {
-      number: '04',
+      number: '03',
       title: 'Garantie Privilège',
       description: 'Protection complète avec notre programme de garantie étendue premium.',
       features: ['Couverture complète', 'Sans franchise', 'Véhicule de courtoisie']

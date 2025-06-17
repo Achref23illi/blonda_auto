@@ -17,7 +17,7 @@ const Footer = () => {
       title: 'Services',
       links: [
         { label: 'Sélection Exclusive', href: '#selection' },
-        { label: 'Financement Sur Mesure', href: '#financement' },
+        { label: 'Service Mécanique', href: '#mecanique' },
         { label: 'Conciergerie Automobile', href: '#conciergerie' },
         { label: 'Garantie Privilège', href: '#garantie' }
       ]
@@ -48,7 +48,7 @@ const Footer = () => {
             >
               <div className="mb-8">
                 <h3 className="text-3xl font-extralight tracking-[0.3em] mb-2">
-                  BLONDA
+                  BLANDA
                 </h3>
                 <span className="text-sm tracking-[0.4em] font-light text-gray-400">
                   AUTOMOBILE
@@ -153,7 +153,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="flex items-center space-x-8">
               <p className="text-xs tracking-[0.2em] uppercase text-gray-500">
-                © {currentYear} Blonda Auto • Tous droits réservés
+                © {currentYear} Blanda Auto • Tous droits réservés
               </p>
             </div>
             

@@ -8,6 +8,7 @@ import About from './components/About';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import CarDetails from './components/CarDetails';
+import MechanicalService from './components/MechanicalService';
 
 function App() {
   const [currentView, setCurrentView] = useState<'home' | 'car-details'>('home');
@@ -82,6 +83,7 @@ function App() {
         <Hero />
         <Services />
         <FeaturedCars onCarSelect={handleCarSelect} />
+        <MechanicalService />
         <About />
         <Contact />
       </main>
